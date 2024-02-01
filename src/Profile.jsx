@@ -45,6 +45,7 @@ function Profile() {
   return (
     <div className='container'>
     <input type="text" 
+    placeholder='Enter Github Username '
       id='input-box'
       onChange={inputBoxHandler}/>
       <div className="inner-container">
