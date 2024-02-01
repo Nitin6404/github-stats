@@ -8,10 +8,15 @@ function Profile() {
   const [followers, setFollowers] = useState(0);
   const [following, setFollowing] = useState(0);
   const [repos, setRepos] = useState(0);
+  
+  const [username, setUsername] = useState("Nitin6404");
+
+  const inputBoxHandler = (e) => {
+    setUsername(e.target.value)
+  }
 
   useEffect(() => {
       const fetchGitHubUser = async () => {
-      const username = "aritra8438";
     
       try {
         const response = await fetch(`https://api.github.com/users/${username}`);
@@ -35,10 +40,13 @@ function Profile() {
     };
     
     fetchGitHubUser();
-  }, [])
+  }, [username])
 
   return (
     <div className='container'>
+    <input type="text" 
+      id='input-box'
+      onChange={inputBoxHandler}/>
       <div className="inner-container">
         <img id="img-tag" src={profileUrl}  />
         <h3>{name}</h3>

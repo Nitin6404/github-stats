@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    right: 30%;
 }
 
 .container{
@@ -35,4 +37,23 @@ img{
 a{
     text-decoration: none;
     color: black;
+}
+
+#input-box{
+    position: relative;
+    bottom: 30%;
+    left: 20%;
+    height: 25px;
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 2px 5px black;
+}
+
+#input-box:focus,
+#input-box:hover{
+    border: none;
+    outline: none;
+    font-weight: lighter;
+    font-size: medium;
 }
