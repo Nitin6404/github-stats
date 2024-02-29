@@ -45,10 +45,10 @@ function Profile() {
 
   return (
     <div className='bg-gray h-screen w-full flex items-center justify-center'>
-      <div className='bg-light-cream rounded-md container shadow-lg shadow-black-500/50 flex-col justify-center align-middle lg:w-3/12 lg:h-2/3'>
-        <div className='flex justify-center content-center lg:mt-8'>
+      <div className=' bg-light-cream rounded-md container shadow-lg shadow-black-500/50 flex-col justify-center align-middle lg:w-3/12 lg:h-2/3 md:w-2/5 md:h-2/3'>
+        <div className='flex justify-center content-center lg:mt-8 md:mt-8'>
         <div className="w-72">
-          <div className="relative w-full min-w-[200px] h-10">
+          <div className=" relative w-full min-w-[200px] h-10">
             <div className="absolute grid w-5 h-5 place-items-center text-blue-gray-500 top-2/4 right-3 -translate-y-2/4">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAtZJREFUSEvlltmrjlEUxn+HUlyIzGQMZQiZyR8gynjhQsYc51whxYWiRClEUjJkigspQynl2sUxZqaUeSpDUmR27Odrv6d9lr2/732/m3Nh1Vvf+37rWc/ea6/1rF1DC1lNC/FSlLgVMB4YAPSAEv4N8BS4BPzOu5G8xH2BdcBcoFMi+EfgFLAFeFxpAZWI27hdrAfWAvqdx34BW102NrrF/kgByhErlefcMyYPW8TnKjALeB3Dp4j7AQ1A9ypJM5hIJwPPbJwYcUfgMjDIOz/yRaSCymMi+Q4M9s4PgEnApxAcIz4CLAqcpjrgBWA0sA0YBiiYHp2n3ocAWuBqQCmeAlwMYhxwKV9ejniCb4vQp79vlzy7zXx0RGqzzBqB4cD97IPd8XFgvmEYBdwqwgoMBe4ZzEFgWYy4NfAe6BAA3vqVvitI3N4fRc8Ap0LrFSMe688n5FjhBGN3QdLMXWe6z2CVCdVGM8lUz50xjqrkJ1USa7evDHaG14ZmxMq/qi80gcMiKbKGdsAXA2jKYFhctcB+4zgSuF2ELfDtDTw32DXAdpvqOV7kQ9+lwOEqiWcCZw12MXDUEksEmvrMA867gpteJfFp14azDXYccM0S613tZMfeQuBYQXJhSjsL7LNv1dLMtgKy1xVTHfDTi4ZaTHYI2BCpUrseDReNQxFbkxQvyT5a4lBxVgI3fIspC3+A68AO4ISJKj3f7PU8NfFGuIvEnRSxvu8EVnkHTZVuTgJPBheBmIR2AaRyKdsVxCz5xFbX1g8KrTArLgVeAHwD9iSiSyxCiczcbvqZ/DXEpdLSB7jid1vv+1sTppxJ4XTGoUmfJwIvLLDc1UdBtGO1mSryISBR6Jpgl1jo/8zuusVPi5GmUh3GleypSjXgdbX9AHROEEtaNYfVEbowbPJHE3WvdMvMQNqJUj7QTZd5CWL17UtfA3Y4/APJS1zheIv//f8R/wWu0n4fd8acIQAAAABJRU5ErkJggg=="/>
             </div>
@@ -63,11 +63,11 @@ function Profile() {
           </div>
         </div> 
         </div>
-        <div className="inner-container flex-col lg:mt-6">
+        <div className="inner-container flex-col lg:mt-6 md:mt-6">
             <div className="flex justify-center align-middle">
               <img className='rounded-full w-60 h-60' id="img-tag" src={profileUrl}  />
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center lg:mt-4 md:mt-4">
               <div>
                 <div>
                   <h3>{name}</h3>
