@@ -45,8 +45,8 @@ function Profile() {
 
   return (
     <div className='bg-gray h-screen w-full flex items-center justify-center'>
-      <div className='bg-light-cream rounded-md container shadow-lg shadow-black-500/50 flex-col justify-center align-middle xl:w-3/12 xl:h-2/3'>
-        <div className='flex justify-center content-center xl:mt-8'>
+      <div className='bg-light-cream rounded-md container shadow-lg shadow-black-500/50 flex-col justify-center align-middle lg:w-3/12 lg:h-2/3'>
+        <div className='flex justify-center content-center lg:mt-8'>
         <div className="w-72">
           <div className="relative w-full min-w-[200px] h-10">
             <div className="absolute grid w-5 h-5 place-items-center text-blue-gray-500 top-2/4 right-3 -translate-y-2/4">
@@ -63,7 +63,7 @@ function Profile() {
           </div>
         </div> 
         </div>
-        <div className="inner-container flex-col xl:mt-6">
+        <div className="inner-container flex-col lg:mt-6">
             <div className="flex justify-center align-middle">
               <img className='rounded-full w-60 h-60' id="img-tag" src={profileUrl}  />
             </div>
