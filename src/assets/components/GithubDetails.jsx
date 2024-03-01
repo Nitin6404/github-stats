@@ -20,7 +20,7 @@ function GithubDetails({name, user, followers, following, repos, profileUrl, blo
                   <h5>No. of Repos: {repos}</h5>
                   <h5>Portfolio: 
                     {blogLink != null ? 
-                      <a className='hover:bg-slate-light hover:text-slate-dark' href={blogLink}>View Here</a>
+                      <a target='blank' className='hover:bg-slate-light hover:text-slate-dark' href={blogLink}>View Here</a>
                       : <h5> No Portfolio</h5>
                     }
                   </h5>
