@@ -1,51 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import "boxicons"
-import "../src/index.css"
+import React from 'react';
+import "boxicons";
 
-function Profile() {
-  const [profileUrl, setprofileUrl] = useState('');
-  const [name, setname] = useState('');
-  const [user, setUser] = useState('');
-  const [followers, setFollowers] = useState(0);
-  const [following, setFollowing] = useState(0);
-  const [repos, setRepos] = useState(0);
-  
-  const [username, setUsername] = useState("Nitin6404");
-
+function SearchUser({setUsername}) {
   const inputBoxHandler = (e) => {
     setUsername(e.target.value)
   }
-
-  useEffect(() => {
-      const fetchGitHubUser = async () => {
-    
-      try {
-        const response = await fetch(`https://api.github.com/users/${username}`);
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log(data);
-        // Now you can use the data in your application
-        setprofileUrl(data.avatar_url);
-        setUser(data.login);
-        setname(data.name)
-        setFollowers(data.followers);
-        setFollowing(data.following);
-        setRepos(data.public_repos);
-        console.log(profileUrl);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    
-    fetchGitHubUser();
-  }, [username])
-
   return (
-    <div className='bg-gray h-screen w-full flex items-center justify-center'>
-      <div className=' bg-light-cream rounded-md container shadow-lg shadow-black-500/50 flex-col justify-center align-middle lg:w-3/12 lg:h-2/3 md:w-2/5 md:h-2/3'>
+    <div>
         <div className='flex justify-center content-center lg:mt-8 md:mt-8'>
         <div className="w-72">
           <div className=" relative w-full min-w-[200px] h-10">
@@ -63,27 +24,8 @@ function Profile() {
           </div>
         </div> 
         </div>
-        <div className="inner-container flex-col lg:mt-6 md:mt-6">
-            <div className="flex justify-center align-middle">
-              <img className='rounded-full w-60 h-60' id="img-tag" src={profileUrl}  />
-            </div>
-            <div className="flex justify-center lg:mt-4 md:mt-4">
-              <div>
-                <div>
-                  <h3>{name}</h3>
-                  <h3>Username: {user}</h3>
-                </div>
-                <div >
-                  <h5>Followers: {followers}</h5>
-                  <h5>Following: {following}</h5>
-                  <h5>No. of Repos: {repos}</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
     </div>
   )
 }
 
-export default Profile
+export default SearchUser
