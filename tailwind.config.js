@@ -11,7 +11,9 @@ export default {
       "cream": "#e2eced",
       "dark-blue": "#a3c49b",
       "gray": "#bcb8b1",
-      "light-cream": "#f4f3ee"
+      "light-cream": "#f4f3ee",
+      "slate-light": "#f1f5f9",
+      "slate-dark": "#0f172a"
 
     },
     fontFamily: {
